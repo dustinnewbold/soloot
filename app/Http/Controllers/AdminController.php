@@ -139,8 +139,13 @@ class AdminController extends Controller {
 			$member = Member::firstOrCreate(['name' => $xmlMember->name]);
 			$race = Race::firstOrCreate(['name' => $xmlMember->race]);
 			$class = MClass::firstOrCreate(['name' => $xmlMember->class]);
-			$member->race = $race->id;
+			$member->race_id = $race->id;
+			$member->class_id = $class->id;
 			$member->sex = $xmlMember->sex;
+
+			if ( $member->cooldown ) {
+				$member->cooldown--;
+			}
 
 			if ( $xmlMember->level > 0 ) {
 				$member->level = $xmlMember->level;
@@ -165,6 +170,10 @@ class AdminController extends Controller {
 			$member = Member::firstOrCreate(['name' => $loot->member]);
 			$boss = Boss::firstOrCreate(['name' => (string)$loot->boss, 'zone_id' => $zone->id]);
 			$item = Item::firstOrCreate(['name' => $loot->name, 'idstring' => $loot->itemid]);
+
+			echo('Adding item to ' . $member->name);
+			$member->cooldown = 4;
+			$member->save();
 
 			$raid->items()->attach($item->id, ['member_id' => $member->id,
 											  	'raid_id' => $raid->id,

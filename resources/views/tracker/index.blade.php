@@ -27,7 +27,15 @@
 						{{ $member->name }}
 					</td>
 					<td>
-						COOLDOWN
+						@if ( $member->cooldown == 0 )
+							<span class="green">
+								OFF COOLDOWN
+							</span>
+						@else
+							<span class="red">
+								CD ({{ $member->cooldown }} raids)
+							</span>
+						@endif
 					</td>
 					<td>
 						ATTENDANCE

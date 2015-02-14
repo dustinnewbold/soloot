@@ -17,16 +17,10 @@ class CreateMembersTable extends Migration {
 			$table->increments('id');
 			$table->string('name', 100);
 			$table->integer('cooldown')->default(0);
-
 			$table->integer('race_id')->unsigned()->nullable();
-			$table->foreign('race_id')->references('id')->on('races')->onDelete('cascade');
-
 			$table->integer('class_id')->unsigned()->nullable();
-			$table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
-
 			$table->integer('sex')->unsigned()->nullable();
 			$table->integer('level')->unsigned()->nullable();
-
 			$table->timestamps();
 		});
 	}

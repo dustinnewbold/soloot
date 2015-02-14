@@ -17,7 +17,7 @@ class TrackerController extends Controller {
 	 */
 	public function index()
 	{
-		$members = Member::all();
+		$members = Member::orderBy('name', 'ASC')->get();
 		$raids = Raid::take(4)->get();
 		return view('tracker.index', compact('members', 'raids'));
 	}

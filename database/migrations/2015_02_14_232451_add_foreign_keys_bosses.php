@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBossesTable extends Migration {
+class AddForeignKeysBosses extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,9 @@ class CreateBossesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('bosses', function(Blueprint $table)
+		Schema::table('bosses', function(Blueprint $table)
 		{
-			$table->increments('id');
-			$table->string('name', 100);
-			$table->integer('zone_id')->unsigned();
-			$table->timestamps();
+			$table->foreign('zone_id')->references('id')->on('zones')->onDelete('cascade');
 		});
 	}
 
@@ -28,7 +25,10 @@ class CreateBossesTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('bosses');
+		Schema::table('bosses', function(Blueprint $table)
+		{
+			//
+		});
 	}
 
 }

@@ -1,14 +1,13 @@
+/**
+ * Base
+ */
+
 body {
 	background: url('http://shatteredoath.com/img/tlo.jpg') top;
 	font-size: 16px;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	line-height: 1.2em;
 	color: #fff;
-}
-
-.container {
-	width: 960px;
-	margin: 200px auto 0;
 }
 
 table {
@@ -27,6 +26,37 @@ tr {
 td {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
+}
+
+tr:nth-child(even) {
+	background: #333;
+}
+
+
+
+
+/**
+ * Globals
+ */
+
+.green {
+	color: #0f0;
+}
+
+.red {
+	color: #f00;
+}
+
+
+
+
+/**
+ * Layout
+ */
+
+.container {
+	width: 960px;
+	margin: 200px auto 0;
 }
 
 .loot-received {
