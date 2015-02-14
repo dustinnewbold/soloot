@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
+use App\Models\Member;
+use App\Models\Raid;
+
 class TrackerController extends Controller {
 
 	/**
@@ -14,7 +17,9 @@ class TrackerController extends Controller {
 	 */
 	public function index()
 	{
-		return \App\Models\Zone::with('bosses')->get();
+		$members = Member::all();
+		$raids = Raid::take(4)->get();
+		return view('tracker.index', compact('members', 'raids'));
 	}
 
 	/**

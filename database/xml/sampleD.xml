@@ -1,0 +1,465 @@
+<raidlog>
+<head>
+	<export>
+		<name>EQdkp Plus XML</name>
+		<version>1.0</version>
+	</export>
+	<tracker>
+		<name>Mizus RaidTracker</name>
+		<version>v0.62.1</version>
+	</tracker>
+	<gameinfo>
+		<game>World of Warcraft</game>
+		<language>enUS</language>
+		<charactername>Kasath</charactername>
+	</gameinfo>
+</head>
+	<raiddata>
+		<zones>
+			<zone>
+				<enter>1423617601</enter>
+				<leave>1423630067</leave>
+				<name>Blackrock Foundry</name>
+				<difficulty>15</difficulty>
+			</zone>
+		</zones>
+		<bosskills>
+			<bosskill>
+				<name>Trash Mob</name>
+				<time>1423618278</time>
+				<difficulty>15</difficulty>
+			</bosskill>
+			<bosskill>
+				<name>Gruul</name>
+				<time>1423619259</time>
+				<difficulty>15</difficulty>
+			</bosskill>
+			<bosskill>
+				<name>Oregorger</name>
+				<time>1423623387</time>
+				<difficulty>15</difficulty>
+			</bosskill>
+			<bosskill>
+				<name>Hans'gar and Franzok</name>
+				<time>1423624776</time>
+				<difficulty>15</difficulty>
+			</bosskill>
+			<bosskill>
+				<name>Flamebender Ka'graz</name>
+				<time>1423628065</time>
+				<difficulty>15</difficulty>
+			</bosskill>
+		</bosskills>
+		<members>
+			<member>
+				<name>Ampeg</name>
+				<race>Orc</race>
+				<sex>2</sex>
+				<class>WARRIOR</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629839</time>
+				</times>
+			</member>
+			<member>
+				<name>Arrent</name>
+				<race>BloodElf</race>
+				<sex>2</sex>
+				<class>PALADIN</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629713</time>
+				</times>
+			</member>
+			<member>
+				<name>Convex</name>
+				<race>BloodElf</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>PALADIN</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Dim</name>
+				<race>BloodElf</race>
+				<guild>Shattered Oath</guild>
+				<sex>3</sex>
+				<class>PRIEST</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629707</time>
+				</times>
+			</member>
+			<member>
+				<name>Drunkenbrew</name>
+				<race>Pandaren</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>MONK</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Idotucola</name>
+				<race>Goblin</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>WARLOCK</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629235</time>
+				</times>
+			</member>
+			<member>
+				<name>Inevera</name>
+				<race>BloodElf</race>
+				<sex>3</sex>
+				<class>PRIEST</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629377</time>
+				</times>
+			</member>
+			<member>
+				<name>Jellomonster</name>
+				<race>Orc</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>HUNTER</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Jeremee</name>
+				<race>Tauren</race>
+				<sex>2</sex>
+				<class>DRUID</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423624381</time>
+				</times>
+			</member>
+			<member>
+				<name>Kasath</name>
+				<race>Orc</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>WARRIOR</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Lakron</name>
+				<race>Orc</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>HUNTER</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Mortenero</name>
+				<race>Scourge</race>
+				<sex>2</sex>
+				<class>MAGE</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Oglop</name>
+				<race>Tauren</race>
+				<sex>2</sex>
+				<class>PALADIN</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423625725</time>
+					<time type='join'>1423626409</time>
+					<time type='leave'>1423629377</time>
+				</times>
+			</member>
+			<member>
+				<name>Onza</name>
+				<race>Pandaren</race>
+				<sex>3</sex>
+				<class>ROGUE</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629247</time>
+				</times>
+			</member>
+			<member>
+				<name>Rejuvenate</name>
+				<race>Troll</race>
+				<sex>3</sex>
+				<class>DRUID</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Snugibun</name>
+				<race>BloodElf</race>
+				<sex>3</sex>
+				<class>MAGE</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Trezd</name>
+				<race>Orc</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>WARRIOR</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423630067</time>
+				</times>
+			</member>
+			<member>
+				<name>Valyrra</name>
+				<race>BloodElf</race>
+				<guild>Shattered Oath</guild>
+				<sex>3</sex>
+				<class>ROGUE</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629371</time>
+				</times>
+			</member>
+			<member>
+				<name>Ves</name>
+				<race>Goblin</race>
+				<sex>3</sex>
+				<class>DEATHKNIGHT</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629241</time>
+				</times>
+			</member>
+			<member>
+				<name>Wakaw</name>
+				<race>Troll</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>DRUID</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629211</time>
+				</times>
+			</member>
+			<member>
+				<name>Wot</name>
+				<race>BloodElf</race>
+				<sex>2</sex>
+				<class>HUNTER</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423617601</time>
+					<time type='leave'>1423629229</time>
+				</times>
+			</member>
+			<member>
+				<name>Zaithon</name>
+				<race>Tauren</race>
+				<guild>Shattered Oath</guild>
+				<sex>2</sex>
+				<class>SHAMAN</class>
+				<level>100</level>
+				<times>
+					<time type='join'>1423618333</time>
+					<time type='leave'>1423629259</time>
+				</times>
+			</member>
+		</members>
+		<items>
+			<item>
+				<name>Bracers of Darkened Skies</name>
+				<time>1423618278</time>
+				<member>Inevera</member>
+				<itemid>119332:0:0:0:0:0:0:0:100:0:5:2:564:566</itemid>
+				<cost>0</cost>
+				<boss>Trash Mob</boss>
+			</item>
+			<item>
+				<name>Doomslag Greatboots</name>
+				<time>1423618410</time>
+				<member>Trezd</member>
+				<itemid>119341:0:0:0:0:0:0:0:100:0:5:2:561:566</itemid>
+				<cost>0</cost>
+				<boss>Trash Mob</boss>
+			</item>
+			<item>
+				<name>Darklight Necklace</name>
+				<time>1423619319</time>
+				<member>Drunkenbrew</member>
+				<itemid>113865:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Gruul</boss>
+			</item>
+			<item>
+				<name>Vest of Forceful Fury</name>
+				<time>1423619348</time>
+				<member>Drunkenbrew</member>
+				<itemid>113870:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Gruul</boss>
+			</item>
+			<item>
+				<name>Darklight Necklace</name>
+				<time>1423619274</time>
+				<member>Lakron</member>
+				<itemid>113865:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Gruul</boss>
+			</item>
+			<item>
+				<name>Gronn-Skin Crown</name>
+				<time>1423619395</time>
+				<member>Wot</member>
+				<itemid>113863:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Gruul</boss>
+			</item>
+			<item>
+				<name>Head-Lopper Skullscythe</name>
+				<time>1423623442</time>
+				<member>Drunkenbrew</member>
+				<itemid>119448:0:0:0:0:0:0:0:100:0:5:2:561:566</itemid>
+				<cost>0</cost>
+				<boss>Oregorger</boss>
+			</item>
+			<item>
+				<name>Goren Soul Repository</name>
+				<time>1423623589</time>
+				<member>Idotucola</member>
+				<itemid>119194:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Oregorger</boss>
+			</item>
+			<item>
+				<name>Unstable Slag Shoulderplates</name>
+				<time>1423623402</time>
+				<member>Oglop</member>
+				<itemid>113884:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Oregorger</boss>
+			</item>
+			<item>
+				<name>Vertebrae Protector</name>
+				<time>1423624879</time>
+				<member>Ves</member>
+				<itemid>113900:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Hans'gar and Franzok</boss>
+			</item>
+			<item>
+				<name>Gauntlets of Dramatic Blows</name>
+				<time>1423624915</time>
+				<member>Arrent</member>
+				<itemid>113906:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Hans'gar and Franzok</boss>
+			</item>
+			<item>
+				<name>Razoredge Blade Ring</name>
+				<time>1423624791</time>
+				<member>Oglop</member>
+				<itemid>113908:0:0:0:0:0:0:0:100:0:5:2:564:566</itemid>
+				<cost>0</cost>
+				<boss>Hans'gar and Franzok</boss>
+			</item>
+			<item>
+				<name>Chest of the Iron Vanquisher</name>
+				<time>1423628112</time>
+				<member>Onza</member>
+				<itemid>119315:0:0:0:0:0:0:0:100:0:5:1:570</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Chest of the Iron Vanquisher</name>
+				<time>1423628124</time>
+				<member>Mortenero</member>
+				<itemid>119315:0:0:0:0:0:0:0:100:0:5:1:570</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Chest of the Iron Protector</name>
+				<time>1423628164</time>
+				<member>Jellomonster</member>
+				<itemid>119318:0:0:0:0:0:0:0:100:0:5:1:570</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Choker of Bloody Flame</name>
+				<time>1423628224</time>
+				<member>Snugibun</member>
+				<itemid>120077:0:0:0:0:0:0:0:100:0:5:2:564:566</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Grips of Rekindling</name>
+				<time>1423628080</time>
+				<member>Wot</member>
+				<itemid>113915:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Cinderwolf Signet</name>
+				<time>1423628080</time>
+				<member>Onza</member>
+				<itemid>113917:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+			<item>
+				<name>Dagger of Blazing Radiance</name>
+				<time>1423628306</time>
+				<member>Snugibun</member>
+				<itemid>113920:0:0:0:0:0:0:0:100:0:5:1:566</itemid>
+				<cost>0</cost>
+				<boss>Flamebender Ka'graz</boss>
+			</item>
+		</items>
+	</raiddata>
+</raidlog>
