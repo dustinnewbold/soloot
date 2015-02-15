@@ -37,7 +37,18 @@ class LootPublish extends Command {
 	 */
 	public function fire()
 	{
-		//
+		$this->info('Copying CSS directory into public_html/soloot/css');
+		\File::copyDirectory(public_path() . '/css', base_path() . '/../public_html/soloot/css');
+		$this->info('Copying JavaScript directory into public_html/soloot/js');
+		\File::copyDirectory(public_path() . '/js', base_path() . '/../public_html/soloot/js');
+
+		$this->info('Clearing cache');
+		$this->call('cache:clear');
+
+		$this->info('Caching configuration');
+		$this->call('config:cache');
+
+		$this->info('-- Done publishing what needs to be published! --');
 	}
 
 	/**
@@ -47,9 +58,7 @@ class LootPublish extends Command {
 	 */
 	protected function getArguments()
 	{
-		return [
-			['example', InputArgument::REQUIRED, 'An example argument.'],
-		];
+		return [];
 	}
 
 	/**
@@ -59,9 +68,7 @@ class LootPublish extends Command {
 	 */
 	protected function getOptions()
 	{
-		return [
-			['example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null],
-		];
+		return [];
 	}
 
 }

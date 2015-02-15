@@ -4,6 +4,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use DB;
 
 use App\Models\Member;
 use App\Models\Raid;
@@ -19,9 +20,15 @@ class TrackerController extends Controller {
 	public function index()
 	{
 		$members = Member::orderBy('name', 'ASC')->get();
-		$raids = Raid::take(4)->orderBy('start_time', 'DESC')->get();
+		$dbloots = DB::table('item_raid')->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->groupBy('member_id')->orderBy('member_id')->get();
+		$loots = [];
+
+		foreach ( $dbloots as $loot ) {
+			$loots[$loot->member_id] = $loot;
+		}
+
 		$classes = MClass::asArray();
-		return view('tracker.index', compact('members', 'raids', 'classes'));
+		return view('tracker.index', compact('members', 'loots', 'classes'));
 	}
 
 	/**

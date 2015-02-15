@@ -13,13 +13,12 @@
 				<th>
 					Cooldown
 				</th>
-				@foreach ( $raids as $raid )
-					<th>
-						<a href="{{ route('raids.show', $raid->id) }}">
-							{{ date('M d', $raid->start_time) }}
-						</a>
-					</th>
-				@endforeach
+				<th>
+					Last Loot Received
+				</th>
+				<th>
+					Loot Recieved Date
+				</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -41,15 +40,18 @@
 							</span>
 						@endif
 					</td>
-					@foreach ( $raids as $raid )
-						<td>
-							@if ( ! $raid->getLoot($member->id)->isEmpty() )
-								@foreach ( $raid->getLoot($member->id) as $loot )
-									<a href="https://www.wowhead.com/{{ $loot->getLink() }}" rel="{{ $loot->getLink() }}" target="_blank"></a><br/>
-								@endforeach
-							@endif
-						</td>
-					@endforeach
+					<td>
+						@if ( ! empty($loots[$member->id]) )
+							<a href="https://www.wowhead.com/{{ lootToLink($loots[$member->id]->idstring) }}" rel="{{ lootToLink($loots[$member->id]->idstring) }}" target="_blank">
+								{{ $loots[$member->id]->name }}
+							</a>
+						@endif
+					</td>
+					<td>
+						@if ( ! empty($loots[$member->id]) )
+							{{ round((time() - $loots[$member->id]->time) / 86400) }} days ago
+						@endif
+					</td>
 				</tr>
 			@endforeach
 		</tbody>

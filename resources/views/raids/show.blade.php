@@ -21,16 +21,13 @@
 					Left
 				</th>
 				<th>
-					Attendance
-				</th>
-				<th>
 					Loot Received
 				</th>
 			</tr>
 		</thead>
 		<tbody>
 			@foreach ( $members as $member )
-				<tr class="{{ strtolower($classes[$member->class_id]->name) }}">
+				<tr class="{{ strtolower($classes[$member->class_id]->name) }}" data-href="{{ strtolower(route('members.show', $member->name)) }}">
 					<td>
 						{{ $member->name }}
 					</td>
@@ -39,9 +36,6 @@
 					</td>
 					<td>
 						{{ date('h:i:s A', $member->leave_time) }}
-					</td>
-					<td>
-						{{ round(( $member->leave_time - $member->join_time ) / ( $raid->end_time - $raid->start_time) * 100, 0) }}%
 					</td>
 					<td>
 						@if ( ! empty($loots[$member->id]) )

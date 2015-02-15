@@ -24,7 +24,7 @@
 		</thead>
 		<tbody>
 			@foreach ( $raids as $raid )
-				<tr>
+				<tr data-href="{{ route('raids.show', $raid->id) }}">
 					<td>
 						{{ App\Models\Zone::find($raid->zone_id)->name }}
 						({{ App\Models\Difficulty::find($raid->difficulty_id)->name }})

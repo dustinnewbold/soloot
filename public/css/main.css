@@ -9,11 +9,17 @@
 }
 
 body {
-	background: #000;
+	background: url('http://shatteredoath.com/img/formbkg.jpg');
 	font-size: 16px;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	line-height: 1.2em;
 	color: #fff;
+	padding: 0;
+}
+
+h1 {
+	margin: 0;
+	padding: 20px;
 }
 
 table {
@@ -44,6 +50,10 @@ a {
 	cursor: pointer;
 }
 
+tr[data-href]:hover {
+	background: #222;
+}
+
 
 
 
@@ -67,8 +77,10 @@ a {
  */
 
 .container {
-	width: 100%;
-	padding: 40px;
+	width: 1000px;
+	padding: 20px;
+	background: #1a1a1a;
+	margin: 0 auto;
 }
 
 .loot-received {
@@ -91,54 +103,65 @@ a {
 .deathknight,
 .deathknight a {
 	color: #c41f3b;
+	text-decoration: none;
 }
 
 .druid,
 .druid a {
 	color: #ff7d0a;
+	text-decoration: none;
 }
 
 .hunter,
 .hunter a {
 	color: #abd473;
+	text-decoration: none;
 }
 
 .mage,
 .mage a {
 	color: #69ccf0;
+	text-decoration: none;
 }
 
 .monk,
 .monk a {
 	color: #00ff96;
+	text-decoration: none;
 }
 
 .paladin,
 .paladin a {
 	color: #f58cba;
+	text-decoration: none;
 }
 
 .priest,
 .priest a {
 	color: #fff;
+	text-decoration: none;
 }
 
 .rogue,
 .rogue a {
 	color: #fff569;
+	text-decoration: none;
 }
 
 .shaman,
 .shaman a {
 	color: #0070de;
+	text-decoration: none;
 }
 
 .warlock,
 .warlock a {
 	color: #9482c9;
+	text-decoration: none;
 }
 
 .warrior,
 .warrior a {
 	color: #c79c6e;
+	text-decoration: none;
 }
