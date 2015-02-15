@@ -10,21 +10,22 @@
 				<th>
 					Cooldown
 				</th>
-				<th>
-					Attendance (30/60/90)
-				</th>
 				@foreach ( $raids as $raid )
 					<th>
-						{{ date('M d', $raid->start_time) }}
+						<a href="{{ route('raids.show', $raid->id) }}">
+							{{ date('M d', $raid->start_time) }}
+						</a>
 					</th>
 				@endforeach
 			</tr>
 		</thead>
 		<tbody>
 			@foreach ( $members as $member )
-				<tr>
-					<td>
-						{{ $member->name }}
+				<tr data-href="{{ route('members.show', strtolower($member->name)) }}">
+					<td class="{{ strtolower($classes[$member->class_id]->name) }}">
+						<a href="{{ route('members.show', strtolower($member->name)) }}">
+							{{ $member->name }}
+						</a>
 					</td>
 					<td>
 						@if ( $member->cooldown == 0 )
@@ -37,12 +38,13 @@
 							</span>
 						@endif
 					</td>
-					<td>
-						ATTENDANCE
-					</td>
 					@foreach ( $raids as $raid )
 						<td>
-							{{ $raid->getLoot($member->id) }}
+							@if ( ! $raid->getLoot($member->id)->isEmpty() )
+								@foreach ( $raid->getLoot($member->id) as $loot )
+									<a href="https://www.wowhead.com/{{ $loot->getLink() }}" rel="{{ $loot->getLink() }}" target="_blank"></a><br/>
+								@endforeach
+							@endif
 						</td>
 					@endforeach
 				</tr>

@@ -23,19 +23,25 @@ table {
 
 th {
 	text-align: left;
-}
-
-tr {
-	height: 40px;
+	padding: 10px;
 }
 
 td {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
+	padding: 10px;
 }
 
 tr:nth-child(even) {
 	background: #333;
+}
+
+a {
+	color: #fff;
+}
+
+[data-href] {
+	cursor: pointer;
 }
 
 
@@ -73,4 +79,66 @@ tr:nth-child(even) {
 	display: block;
 	width: 100%;
 	height: 40px;
+}
+
+
+
+
+/**
+ * Class colors
+ */
+
+.deathknight,
+.deathknight a {
+	color: #c41f3b;
+}
+
+.druid,
+.druid a {
+	color: #ff7d0a;
+}
+
+.hunter,
+.hunter a {
+	color: #abd473;
+}
+
+.mage,
+.mage a {
+	color: #69ccf0;
+}
+
+.monk,
+.monk a {
+	color: #00ff96;
+}
+
+.paladin,
+.paladin a {
+	color: #f58cba;
+}
+
+.priest,
+.priest a {
+	color: #fff;
+}
+
+.rogue,
+.rogue a {
+	color: #fff569;
+}
+
+.shaman,
+.shaman a {
+	color: #0070de;
+}
+
+.warlock,
+.warlock a {
+	color: #9482c9;
+}
+
+.warrior,
+.warrior a {
+	color: #c79c6e;
 }

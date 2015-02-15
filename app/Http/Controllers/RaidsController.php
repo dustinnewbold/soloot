@@ -3,13 +3,13 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use Illuminate\Http\Request;
-
-use App\Models\Member;
 use App\Models\Raid;
 use App\Models\MClass;
 
-class TrackerController extends Controller {
+use Illuminate\Http\Request;
+use DB, Cache;
+
+class RaidsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,10 +18,7 @@ class TrackerController extends Controller {
 	 */
 	public function index()
 	{
-		$members = Member::orderBy('name', 'ASC')->get();
-		$raids = Raid::take(4)->orderBy('start_time', 'DESC')->get();
-		$classes = MClass::asArray();
-		return view('tracker.index', compact('members', 'raids', 'classes'));
+		//
 	}
 
 	/**
@@ -52,7 +49,18 @@ class TrackerController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$raid = Raid::with('zone')->findOrFail($id);
+		$members = DB::table('member_raid')->where('raid_id', $raid->id)->leftJoin('members', 'member_raid.member_id', '=', 'members.id')->get();
+		$dbloot = DB::table('item_raid')->where('raid_id', $raid->id)->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->get();
+		$classes = MClass::asArray();
+
+		// Set up loots
+		$loots = [];
+		foreach ( $dbloot as $loot ) {
+			$loots[$loot->member_id][] = $loot;
+		}
+		
+		return view('raids.show', compact('raid', 'members', 'loots', 'classes'));
 	}
 
 	/**

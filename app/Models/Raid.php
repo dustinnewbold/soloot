@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 class Raid extends Model {
 
 	public function zone() {
-		return $this->belongsTo('Zone');
+		return $this->belongsTo('App\Models\Zone');
 	}
 
 	public function members() {
@@ -22,7 +22,7 @@ class Raid extends Model {
 			return $this->items()->get();
 		}
 
-		// return $this->items()->where('')
+		return $this->items()->where('member_id', $memberID)->get();
 	}
 
 }

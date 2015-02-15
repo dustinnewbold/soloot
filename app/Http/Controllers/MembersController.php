@@ -3,13 +3,11 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Models\Member;
+
 use Illuminate\Http\Request;
 
-use App\Models\Member;
-use App\Models\Raid;
-use App\Models\MClass;
-
-class TrackerController extends Controller {
+class MembersController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -18,10 +16,7 @@ class TrackerController extends Controller {
 	 */
 	public function index()
 	{
-		$members = Member::orderBy('name', 'ASC')->get();
-		$raids = Raid::take(4)->orderBy('start_time', 'DESC')->get();
-		$classes = MClass::asArray();
-		return view('tracker.index', compact('members', 'raids', 'classes'));
+		//
 	}
 
 	/**
@@ -47,12 +42,13 @@ class TrackerController extends Controller {
 	/**
 	 * Display the specified resource.
 	 *
-	 * @param  int  $id
+	 * @param  int  $name
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($name)
 	{
-		//
+		$member = Member::where('name', $name)->first();
+		return view('members.show', compact('member'));
 	}
 
 	/**
