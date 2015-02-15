@@ -1,9 +1,15 @@
+@import url('vendor/normalize.css');
+
 /**
  * Base
  */
 
+* {
+	box-sizing: border-box;
+}
+
 body {
-	background: url('http://shatteredoath.com/img/tlo.jpg') top;
+	background: #000;
 	font-size: 16px;
 	font-family: 'Helvetica Neue', Arial, sans-serif;
 	line-height: 1.2em;
@@ -55,8 +61,8 @@ tr:nth-child(even) {
  */
 
 .container {
-	width: 960px;
-	margin: 200px auto 0;
+	width: 100%;
+	padding: 40px;
 }
 
 .loot-received {
