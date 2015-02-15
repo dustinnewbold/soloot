@@ -16,7 +16,7 @@
 			<label>
 				Cooldown
 			</label>
-			<input type="text" name="cooldown" value="{{ $member->cooldown }}" />
+			<input type="number" name="cooldown" value="{{ $member->cooldown }}" />
 		</fieldset>
 
 		<input type="submit" value="Save" />

@@ -5,6 +5,19 @@
 		{{ $member->name }}
 	</h1>
 
+	@if ( $member->cooldown <= 0 )
+		<h2 class="green">
+			OFF COOLDOWN	
+		</h2>
+	@else
+		<h2 class="red">
+			Cooldown
+			<span class="text-small">
+				with {{ $member->cooldown }} raids to go
+			</span>
+		</h2>
+	@endif
+
 	<h3>
 		Raid History
 	</h3>

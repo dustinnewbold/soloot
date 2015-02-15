@@ -82,7 +82,7 @@ class MembersController extends Controller {
 	public function update($name)
 	{
 		$member = Member::where('name', $name)->first();
-		if ( Input::get('cooldown') ) {
+		if ( is_numeric(Input::get('cooldown')) ) {
 			$member->cooldown = (int)Input::get('cooldown');
 		}
 		$member->save();

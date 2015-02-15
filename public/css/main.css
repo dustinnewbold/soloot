@@ -4,17 +4,12 @@
  * Base
  */
 
-* {
-	box-sizing: border-box;
+body {
+	color: #fff;
 }
 
-body {
-	background: url('http://shatteredoath.com/img/formbkg.jpg');
-	font-size: 16px;
-	font-family: 'Helvetica Neue', Arial, sans-serif;
-	line-height: 1.2em;
-	color: #fff;
-	padding: 0;
+* {
+	box-sizing: border-box;
 }
 
 h1 {
@@ -30,12 +25,14 @@ table {
 th {
 	text-align: left;
 	padding: 10px;
+	color: #fff;
 }
 
 td {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	padding: 10px;
+	color: #fff;
 }
 
 tr:nth-child(even) {
@@ -61,10 +58,24 @@ input {
 label {
 	display: block;
 	margin-bottom: 10px;
+	text-transform: uppercase;
 }
 
 fieldset {
 	border: 0;
+	padding: 0;
+}
+
+textarea {
+	color: #000;
+	padding: 5px;
+	width: 100%;
+	display: block;
+	margin-bottom: 20px;
+}
+
+p {
+	margin-bottom: 20px;
 }
 
 
@@ -82,6 +93,10 @@ fieldset {
 	color: #f00;
 }
 
+.text-small {
+	font-size: 14px;
+}
+
 
 
 
@@ -89,11 +104,10 @@ fieldset {
  * Layout
  */
 
-.container {
-	width: 1000px;
+.content {
 	padding: 20px;
-	background: #1a1a1a;
-	margin: 0 auto;
+	margin: 0;
+	width: 100%;
 }
 
 .loot-received {
