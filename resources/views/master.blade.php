@@ -7,6 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="http://shatteredoath.com/css/main.css">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Rock+Salt' rel='stylesheet' type='text/css'>
 </head>
 <body>
 	<div class="container">
