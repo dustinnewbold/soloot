@@ -22,11 +22,11 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		// $this->import(file_get_contents(base_path() . '/database/xml/sampleA.xml'));
-		// $this->import(file_get_contents(base_path() . '/database/xml/sampleB.xml'));
-		// $this->import(file_get_contents(base_path() . '/database/xml/sampleC.xml'));
-		// $this->import(file_get_contents(base_path() . '/database/xml/sampleD.xml'));
-		// $this->import(file_get_contents(base_path() . '/database/xml/sampleE.xml'));
+		$this->import(file_get_contents(base_path() . '/database/xml/sampleA.xml'));
+		$this->import(file_get_contents(base_path() . '/database/xml/sampleB.xml'));
+		$this->import(file_get_contents(base_path() . '/database/xml/sampleC.xml'));
+		$this->import(file_get_contents(base_path() . '/database/xml/sampleD.xml'));
+		$this->import(file_get_contents(base_path() . '/database/xml/sampleE.xml'));
 
 		return view('admin.index');
 	}

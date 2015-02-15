@@ -1,6 +1,9 @@
 @extends('master')
 
 @section('content')
+	<h1>
+		Loot Tracker
+	</h1>
 	<table>
 		<thead>
 			<tr>

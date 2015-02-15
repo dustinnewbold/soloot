@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-		test
+		Loot Tracker
 	</title>
 	<link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}">
 	<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.min.css">
