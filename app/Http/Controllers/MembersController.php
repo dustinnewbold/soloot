@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Models\Member;
+use App\Models\Raid;
+use DB;
 
 use Illuminate\Http\Request;
 
@@ -48,7 +50,15 @@ class MembersController extends Controller {
 	public function show($name)
 	{
 		$member = Member::where('name', $name)->first();
-		return view('members.show', compact('member'));
+		$raids = Raid::with('zone')->with('difficulty')->orderBy('start_time', 'DESC')->get();
+		$dbloot = DB::table('item_raid')->where('member_id', $member->id)->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->get();
+		$loots = [];
+
+		foreach ( $dbloot as $loot ) {
+			$loots[$loot->raid_id][] = $loot;
+		}
+
+		return view('members.show', compact('member', 'raids', 'loots'));
 	}
 
 	/**

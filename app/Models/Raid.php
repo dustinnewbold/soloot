@@ -4,6 +4,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Raid extends Model {
 
+	public function difficulty() {
+		return $this->belongsTo('App\Models\Difficulty');
+	}
+
 	public function zone() {
 		return $this->belongsTo('App\Models\Zone');
 	}
