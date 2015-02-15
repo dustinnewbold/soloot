@@ -5,7 +5,7 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Member;
 use App\Models\Raid;
-use DB;
+use DB, Input;
 
 use Illuminate\Http\Request;
 
@@ -67,20 +67,27 @@ class MembersController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($name)
 	{
-		//
+		$member = Member::where('name', $name)->first();
+		return view('members.edit', compact('member'));
 	}
 
 	/**
 	 * Update the specified resource in storage.
 	 *
-	 * @param  int  $id
+	 * @param  string   $name
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($name)
 	{
-		//
+		$member = Member::where('name', $name)->first();
+		if ( Input::get('cooldown') ) {
+			$member->cooldown = (int)Input::get('cooldown');
+		}
+		$member->save();
+
+		return redirect()->route('members.show', $name);
 	}
 
 	/**

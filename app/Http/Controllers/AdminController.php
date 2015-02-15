@@ -42,16 +42,9 @@ class AdminController extends Controller {
 	 */
 	public function store()
 	{
-		$raiddata = \Input::get('xml');
-		$raiddata = simplexml_load_string($raiddata);
-
-		$zone = null;
-		$raid = null;
-
-		foreach ( $raiddata->raiddata->zones->zone as $zone ) {
-			return Zone::where('name', $zone->name)->get();
-		}
-		return \Input::all();
+		$xml = \Input::get('xml');
+		$this->import($xml);
+		return view('admin.index');
 	}
 
 	/**
@@ -73,7 +66,7 @@ class AdminController extends Controller {
 	 */
 	public function edit($id)
 	{
-		//
+		
 	}
 
 	/**
@@ -164,8 +157,6 @@ class AdminController extends Controller {
 			$member = Member::firstOrCreate(['name' => $loot->member]);
 			$boss = Boss::firstOrCreate(['name' => (string)$loot->boss, 'zone_id' => $zone->id]);
 			$item = Item::firstOrCreate(['name' => $loot->name, 'idstring' => $loot->itemid]);
-
-			echo('Adding item to ' . $member->name);
 			$member->cooldown = 4;
 			$member->save();
 
@@ -177,7 +168,7 @@ class AdminController extends Controller {
 											  ]);
 		}
 
-		return view('admin.index');
+		return true;
 	}
 
 }
