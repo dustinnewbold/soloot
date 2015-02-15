@@ -27,7 +27,7 @@ class AddForeignKeysBosses extends Migration {
 	{
 		Schema::table('bosses', function(Blueprint $table)
 		{
-			//
+			$table->dropForeign('bosses_zone_id_foreign');
 		});
 	}
 

@@ -4,21 +4,23 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
-class LootPublish extends Command {
+use DB;
+
+class LootTruncate extends Command {
 
 	/**
 	 * The console command name.
 	 *
 	 * @var string
 	 */
-	protected $name = 'loot:publish';
+	protected $name = 'loot:truncate';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Publish public assets to public_html public directory.';
+	protected $description = 'Truncate all the databases.';
 
 	/**
 	 * Create a new command instance.
@@ -37,18 +39,19 @@ class LootPublish extends Command {
 	 */
 	public function fire()
 	{
-		$this->info('Copying CSS directory into public_html/soloot/css');
-		\File::copyDirectory(public_path() . '/css', base_path() . '/../public_html/soloot/css');
-		$this->info('Copying JavaScript directory into public_html/soloot/js');
-		\File::copyDirectory(public_path() . '/js', base_path() . '/../public_html/soloot/js');
+		DB::table('bosses')->delete();
+		DB::table('classes')->delete();
+		DB::table('difficulties')->delete();
+		DB::table('item_raid')->delete();
+		DB::table('items')->delete();
+		DB::table('member_raid')->delete();
+		DB::table('members')->delete();
+		DB::table('options')->delete();
+		DB::table('races')->delete();
+		DB::table('raids')->delete();
+		DB::table('zones')->delete();
 
-		$this->info('Clearing cache');
-		$this->call('cache:clear');
-
-		$this->info('Caching configuration');
-		$this->call('config:cache');
-
-		$this->info('-- Done publishing what needs to be published! --');
+		$this->info('Truncated all tables');
 	}
 
 	/**

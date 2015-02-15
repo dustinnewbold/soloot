@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddForeignKeysMembers extends Migration {
+class AddPasswordToMembers extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -14,8 +14,7 @@ class AddForeignKeysMembers extends Migration {
 	{
 		Schema::table('members', function(Blueprint $table)
 		{
-			$table->foreign('race_id')->references('id')->on('races')->onDelete('cascade');
-			$table->foreign('class_id')->references('id')->on('classes')->onDelete('cascade');
+			$table->string('password', 100)->nullable()->after('name');
 		});
 	}
 
@@ -28,8 +27,7 @@ class AddForeignKeysMembers extends Migration {
 	{
 		Schema::table('members', function(Blueprint $table)
 		{
-			$table->dropForeign('members_race_id_foreign');
-			$table->dropForeign('members_class_id_foreign');
+			$table->dropColumn('password');
 		});
 	}
 

@@ -30,7 +30,10 @@ class AddForeignKeysItemRaid extends Migration {
 	{
 		Schema::table('item_raid', function(Blueprint $table)
 		{
-			//
+			$table->dropForeign('item_raid_item_id_foreign');
+			$table->dropForeign('item_raid_member_id_foreign');
+			$table->dropForeign('item_raid_raid_id_foreign');
+			$table->dropForeign('item_raid_boss_id_foreign');
 		});
 	}
 

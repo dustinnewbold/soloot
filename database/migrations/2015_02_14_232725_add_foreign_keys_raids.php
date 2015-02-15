@@ -29,7 +29,9 @@ class AddForeignKeysRaids extends Migration {
 	{
 		Schema::table('raids', function(Blueprint $table)
 		{
-			//
+			$table->dropForeign('raids_zone_id_foreign');
+			$table->dropForeign('raids_member_id_foreign');
+			$table->dropForeign('raids_difficulty_id_foreign');
 		});
 	}
 
