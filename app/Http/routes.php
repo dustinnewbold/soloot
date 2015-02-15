@@ -18,6 +18,12 @@ Route::get('admin/import', 'AdminController@viewImport');
 Route::resource('members', 'MembersController');
 Route::resource('raids', 'RaidsController');
 
+Route::get('sessiontest', function() {
+	session_start();
+	Session::put('session', $_SESSION);
+	return Session::all();
+});
+
 // Route::get('home', 'HomeController@index');
 
 // Route::controllers([

@@ -26,8 +26,8 @@
 			@foreach ( $raids as $raid )
 				<tr>
 					<td>
-						{{ $raid->zone->name }}
-						({{ $raid->difficulty->name }})
+						{{ App\Models\Zone::find($raid->zone_id)->name }}
+						({{ App\Models\Difficulty::find($raid->difficulty_id)->name }})
 					</td>
 					<td>
 						{{ date('F d, Y', $raid->start_time) }}

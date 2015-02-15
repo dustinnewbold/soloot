@@ -50,7 +50,7 @@ class MembersController extends Controller {
 	public function show($name)
 	{
 		$member = Member::where('name', $name)->first();
-		$raids = Raid::with('zone')->with('difficulty')->orderBy('start_time', 'DESC')->get();
+		$raids = DB::table('member_raid')->where('member_raid.member_id', $member->id)->leftJoin('raids', 'member_raid.raid_id', '=', 'raids.id')->orderBy('start_time', 'DESC')->get();
 		$dbloot = DB::table('item_raid')->where('member_id', $member->id)->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->get();
 		$loots = [];
 
