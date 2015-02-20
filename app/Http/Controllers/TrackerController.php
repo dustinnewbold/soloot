@@ -20,10 +20,13 @@ class TrackerController extends Controller {
 	public function index()
 	{
 		$members = Member::where('active', '>', '0')->orderBy('name', 'ASC')->get();
-		$dbloots = DB::table('item_raid')->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->groupBy('member_id')->orderBy('member_id')->get();
+		$dbloots = DB::table('item_raid')->leftJoin('items', 'item_raid.item_id', '=', 'items.id')->orderBy('time', 'DESC')->get();
 		$loots = [];
 
 		foreach ( $dbloots as $loot ) {
+			if ( isset($loots[$loot->member_id]) ) {
+				continue;
+			}
 			$loots[$loot->member_id] = $loot;
 		}
 
