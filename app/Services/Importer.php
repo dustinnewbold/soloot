@@ -10,7 +10,7 @@ use App\Models\Race;
 use App\Models\MClass;
 use App\Models\Option;
 
-use DB;
+use DB, Redirect;
 
 class Importer {
 	private $raidcd = 3;
