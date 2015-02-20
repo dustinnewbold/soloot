@@ -30,9 +30,15 @@ class Importer {
 			return Redirect::back()->with('message', 'This raid was already uploaded')->with('type', 'error');
 		}
 
+		$raid = simplexml_load_string($xml);
+		$raidtime = (int)$raid->raiddata->zones->zone->enter;
+
 		$table->insert(array(
 			'xml' => $xml,
-			'checksum' => $checksum
+			'checksum' => $checksum,
+			'raid_time' => $raidtime,
+			'created_at' => date('Y-m-d H:i:s'),
+			'updated_at' => date('Y-m-d H:i:s'),
 		));
 	}
 
