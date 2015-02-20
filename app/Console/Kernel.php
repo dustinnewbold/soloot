@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel {
 		'App\Console\Commands\Inspire',
 		'App\Console\Commands\LootPublish',
 		'App\Console\Commands\LootTruncate',
+		'App\Console\Commands\LootReindex',
 	];
 
 	/**

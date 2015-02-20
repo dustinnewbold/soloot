@@ -1,5 +1,22 @@
 @extends('master')
 
+@section('breadcrumbs')
+	<nav class="breadcrumbs">
+		<ul>
+			<li>
+				<a href="{{ url('/') }}">Home</a>
+			</li>
+			<li>
+				<a href="{{ url('/') }}">Raids</a>
+			</li>
+			<li>
+				{{ $raid->zone->name }}, {{ date('M d Y', $raid->start_time) }}
+			</li>
+		</ul>
+	</nav>
+	<div class="clear"></div>
+@stop
+
 @section('content')
 	<h1>
 		{{ $raid->zone->name }} on {{ date('M d Y', $raid->start_time) }}
@@ -40,7 +57,7 @@
 					<td>
 						@if ( ! empty($loots[$member->id]) )
 							@foreach ( $loots[$member->id] as $loot )
-								<a href="#" rel="{{ lootToLink($loot->idstring) }}"></a><br/>
+								<a href="/items/1" rel="{{ lootToLink($loot->idstring) }}"></a><br/>
 							@endforeach
 						@endif
 					</td>

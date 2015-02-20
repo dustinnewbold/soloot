@@ -1,0 +1,15 @@
+.content {
+	padding: 20px;
+	margin: 0;
+	width: 100%;
+}
+
+.loot-received {
+	background: #050;
+}
+
+.table-loot {
+	display: block;
+	width: 100%;
+	height: 40px;
+}

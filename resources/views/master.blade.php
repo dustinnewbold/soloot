@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>
-		Loot Tracker
+		@yield('title', 'Loot Tracker')
 	</title>
 	<link rel="stylesheet" type="text/css" href="http://shatteredoath.com/css/main.css">
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/main.css') }}">
@@ -21,16 +21,16 @@
 						<a href="https://twitter.com/shatteredoathED" target="_blank">TWITTER</a>
 					</li>
 					<li>
-						<a href="forum/">FORUMS</a>
+						<a href="/forum">FORUMS</a>
 					</li>
 					<li>
-						<a href="soloot/">LOOT</a>
+						<a href="{{ url('/') }}">LOOT</a>
 					</li>
 					<li>
-						<a href="roster.php">ROSTER</a>
+						<a href="/roster.php">ROSTER</a>
 					</li>
 					<li>
-						<a href="#">HOME</a>
+						<a href="/">HOME</a>
 					</li>
 				</ul>
 			</nav>
@@ -40,7 +40,13 @@
 			</div>
 			<div class="clear"></div>
 		</header>
+		@if ( Session::get('message') )
+			<div class="alert alert-{{ Session::get('type') ?: 'error' }}">
+				{{ Session::get('message') }}
+			</div>
+		@endif
 		<div class="content">
+			@yield('breadcrumbs')
 			@yield('content')
 		</div>
 	</div>

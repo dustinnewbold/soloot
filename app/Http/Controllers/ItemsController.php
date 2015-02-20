@@ -4,16 +4,11 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-use App\Services\Importer;
+use App\Models\Item;
 
-use DB, Redirect, Input;
+use DB;
 
-class AdminController extends Controller {
-
-	private $importer;
-	public function __construct(Importer $importer) {
-		$this->importer = $importer;
-	}
+class ItemsController extends Controller {
 
 	/**
 	 * Display a listing of the resource.
@@ -22,7 +17,7 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		return view('admin.index');
+		//
 	}
 
 	/**
@@ -42,10 +37,7 @@ class AdminController extends Controller {
 	 */
 	public function store()
 	{
-		$xml = Input::get('xml');
-		$this->importer->storeXML($xml);
-		$this->importer->import($xml);
-		return view('admin.index');
+		//
 	}
 
 	/**
@@ -56,7 +48,11 @@ class AdminController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$item = Item::where('wowid', $id)->first();
+		$history = DB::table('item_raid')->where('item_id', $item->id)->leftJoin('members', 'item_raid.member_id', '=', 'members.id')->orderBy('time', 'DESC')->get();
+		$wowhead = file_get_contents('http://www.wowhead.com/item=' . $id . '&xml');
+
+		return view('items.show', compact('item', 'history', 'wowhead'));
 	}
 
 	/**
@@ -67,7 +63,7 @@ class AdminController extends Controller {
 	 */
 	public function edit($id)
 	{
-		
+		//
 	}
 
 	/**
@@ -92,8 +88,4 @@ class AdminController extends Controller {
 		//
 	}
 
-
-	public function viewImport() {
-		return view('admin.import');
-	}
 }

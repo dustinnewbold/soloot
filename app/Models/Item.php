@@ -4,7 +4,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Item extends Model {
 
-	protected $fillable = ['name', 'idstring'];
+	protected $fillable = ['name', 'wowid'];
 
 	public function getLink() {
 		$id = (int)$this->idstring;

@@ -42,7 +42,7 @@
 					</td>
 					<td>
 						@if ( ! empty($loots[$member->id]) )
-							<a href="https://www.wowhead.com/{{ lootToLink($loots[$member->id]->idstring) }}" rel="{{ lootToLink($loots[$member->id]->idstring) }}" target="_blank">
+							<a href="{{ route('items.show', $loots[$member->id]->wowid) }}" rel="{{ lootToLink($loots[$member->id]->idstring) }}" target="_blank">
 								{{ $loots[$member->id]->name }}
 							</a>
 						@endif

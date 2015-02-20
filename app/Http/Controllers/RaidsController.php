@@ -5,6 +5,8 @@ use App\Http\Controllers\Controller;
 
 use App\Models\Raid;
 use App\Models\MClass;
+use App\Models\Zone;
+use App\Models\Difficulty;
 
 use Illuminate\Http\Request;
 use DB, Cache;
@@ -18,7 +20,22 @@ class RaidsController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$raids = Raid::orderBy('start_time', 'DESC')->get();
+		foreach ( $raids as $raid ) {
+			$members = DB::table('member_raid')->where('raid_id', $raid->id)->count();
+			$raid->members = $members;
+
+			$items = DB::table('item_raid')->where('raid_id', $raid->id)->count();
+			$raid->items = $items;
+
+			$zone = Zone::find($raid->zone_id);
+			$raid->zone = $zone;
+
+			$difficulty = Difficulty::find($raid->difficulty->id);
+			$raid->difficulty = $difficulty;
+		}
+
+		return view('raids.index', compact('raids'));
 	}
 
 	/**
