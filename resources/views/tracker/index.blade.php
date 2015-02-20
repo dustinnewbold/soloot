@@ -4,6 +4,9 @@
 	<h1>
 		Loot Tracker
 	</h1>
+	<a href="{{ route('raids.index') }}" class="btn btn-blue btn-block">
+		Raid History
+	</a>
 	<table>
 		<thead>
 			<tr>

@@ -7,7 +7,7 @@
 				<a href="{{ url('/') }}">Home</a>
 			</li>
 			<li>
-				<a href="{{ url('/') }}">Raids</a>
+				<a href="{{ route('raids.index') }}">Raids</a>
 			</li>
 			<li>
 				{{ $raid->zone->name }}, {{ date('M d Y', $raid->start_time) }}
@@ -57,7 +57,7 @@
 					<td>
 						@if ( ! empty($loots[$member->id]) )
 							@foreach ( $loots[$member->id] as $loot )
-								<a href="/items/1" rel="{{ lootToLink($loot->idstring) }}"></a><br/>
+								<a href="{{ route('items.show', (int)$loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}"></a><br/>
 							@endforeach
 						@endif
 					</td>

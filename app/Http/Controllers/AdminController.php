@@ -13,6 +13,7 @@ class AdminController extends Controller {
 	private $importer;
 	public function __construct(Importer $importer) {
 		$this->importer = $importer;
+		// $this->middleware('auth');
 	}
 
 	/**

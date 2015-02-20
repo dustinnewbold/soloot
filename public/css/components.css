@@ -56,3 +56,37 @@
 .breadcrumbs a {
 	color: #aaa;
 }
+
+
+/**
+ * Buttons
+ */
+
+.btn {
+	font-family: 'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	padding: 5px 15px;
+	color: #fff;
+	text-decoration: none;
+
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.btn-blue {
+	background-color: #5B74A8;
+	border: 1px solid #29447E;
+
+	-webkit-box-shadow: rgba(0,0,0,0.0.1) 0 1px 0 0;
+	-moz-box-shadow: rgba(0,0,0,0.0.1) 0 1px 0 0;
+	box-shadow: rgba(0,0,0,0.0.1) 0 1px 0 0;
+}
+
+.btn-block {
+	float: left;
+	display: block;
+	clear: both;
+	margin-bottom: 20px;
+}

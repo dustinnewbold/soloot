@@ -61,6 +61,14 @@ p {
 
 input {
 	color: #000;
+	margin-bottom: 20px;
+}
+
+input[type=text],
+input[type=password] {
+	padding: 5px;
+	border-radius: 3px;
+	border: 0;
 }
 
 label {

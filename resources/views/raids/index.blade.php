@@ -1,5 +1,19 @@
 @extends('master')
 
+@section('breadcrumbs')
+	<nav class="breadcrumbs">
+		<ul>
+			<li>
+				<a href="{{ url('/') }}">Home</a>
+			</li>
+			<li>
+				Raids
+			</li>
+		</ul>
+	</nav>
+	<div class="clear"></div>
+@stop
+
 @section('title', 'Raid History')
 @section('content')
 	<h1>

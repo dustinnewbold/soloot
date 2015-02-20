@@ -23,7 +23,7 @@
 	</h1>
 
 	<h3>
-		Raid History
+		Item History
 	</h3>
 	<table>
 		<thead>
