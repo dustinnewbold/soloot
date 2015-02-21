@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title style="text-align:center;">
+	<title>
 		@yield('title', 'Loot Tracker')
 	</title>
 	<link rel="stylesheet" type="text/css" href="http://shatteredoath.com/css/main.css">
