@@ -99,3 +99,7 @@
 	float: left;
 	clear: both;
 }
+
+.loot:last-child {
+	margin-bottom: 0;
+}
