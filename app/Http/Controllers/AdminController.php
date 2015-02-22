@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Services\Importer;
+use App\Models\Option;
 
 use DB, Redirect, Input;
 
@@ -23,7 +24,15 @@ class AdminController extends Controller {
 	 */
 	public function index()
 	{
-		return view('admin.index');
+		$dboptions = Option::all();
+		$options = [];
+
+		foreach ( $dboptions as $option ) {
+			$options[$option->key] = $option;
+		}
+		$options = (object)$options;
+
+		return view('admin.index', compact('options'));
 	}
 
 	/**

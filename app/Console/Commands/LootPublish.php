@@ -41,6 +41,8 @@ class LootPublish extends Command {
 		\File::copyDirectory(public_path() . '/css', base_path() . '/../public_html/soloot/css');
 		$this->info('Copying JavaScript directory into public_html/soloot/js');
 		\File::copyDirectory(public_path() . '/js', base_path() . '/../public_html/soloot/js');
+		$this->info('Copying Fonts directory into public_html/soloot/fonts');
+		\File::copyDirectory(public_path() . '/fonts', base_path() . '/../public_html/soloot/fonts');
 
 		$this->info('Clearing cache');
 		$this->call('cache:clear');

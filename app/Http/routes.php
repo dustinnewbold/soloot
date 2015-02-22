@@ -14,7 +14,7 @@
 Route::get('/', 'TrackerController@index');
 Route::get('admin',  ['as' => 'admin.index', 'uses' => 'AdminController@index'] );
 Route::post('admin', ['as' => 'admin.store', 'uses' => 'AdminController@store']);
-Route::get('admin/import', 'AdminController@viewImport');
+Route::get('admin/import', ['as' => 'admin.import', 'uses' => 'AdminController@viewImport']);
 Route::resource('members', 'MembersController');
 Route::resource('raids', 'RaidsController');
 Route::resource('items', 'ItemsController');

@@ -42,11 +42,11 @@
 		<tbody>
 			@foreach ( $history as $loot )
 				<tr data-href="{{ route('members.show', strtolower($loot->name)) }}">
-					<td>
+					<td class="{{ strtolower($classes[$loot->class_id]->name) }}">
 						{{ $loot->name }}
 					</td>
 					<td>
-						<a href="https://www.wowhead.com/{{ lootToLink($loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}" target="_blank"></a>
+						<a href="https://www.wowhead.com/{{ lootToLink($loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}" target="_blank" class="stopprop"></a>
 					</td>
 					<td>
 						{{ date('F d, Y', $loot->time) }}

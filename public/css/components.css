@@ -1,16 +1,15 @@
 .alert {
 	padding: 20px;
 	margin: 20px;
+	border-radius: 10px;
 }
 
 .alert-success {
-	background: #696;
-	border: 1px solid #9f9;
+	background: #27ae60;
 }
 
 .alert-error {
-	background: #966;
-	border: 1px solid #f99;
+	background: #c0392b;
 }
 
 .alert-info {
@@ -19,8 +18,7 @@
 }
 
 .alert-warning {
-	background: #a60;
-	border: 1px solid #f60;
+	background: #d45400;
 }
 
 
@@ -89,4 +87,15 @@
 	display: block;
 	clear: both;
 	margin-bottom: 20px;
+}
+
+
+
+
+
+.loot {
+	margin-bottom: 10px;
+	display: block;
+	float: left;
+	clear: both;
 }

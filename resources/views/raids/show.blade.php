@@ -45,7 +45,7 @@
 		<tbody>
 			@foreach ( $members as $member )
 				<tr class="{{ strtolower($classes[$member->class_id]->name) }}" data-href="{{ strtolower(route('members.show', $member->name)) }}">
-					<td>
+					<td class="{{ strtolower($classes[$member->class_id]->name) }}">
 						{{ $member->name }}
 					</td>
 					<td>

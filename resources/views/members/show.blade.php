@@ -67,7 +67,7 @@
 							No Loot
 						@else
 							@foreach ( $loots[$raid->id] as $loot )
-								<a href="{{ lootToLink($loot->idstring) }}" rel="{{ lootTolink($loot->idstring) }}"></a><br/>
+								<a href="{{ route('items.show', $loot->wowid) }}" rel="{{ lootTolink($loot->idstring) }}" class="loot"></a>
 							@endforeach
 						@endif
 					</td>

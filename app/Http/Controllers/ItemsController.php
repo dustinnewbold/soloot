@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Models\Item;
+use App\Models\MClass;
 
 use DB;
 
@@ -52,7 +53,8 @@ class ItemsController extends Controller {
 		$history = DB::table('item_raid')->where('item_id', $item->id)->leftJoin('members', 'item_raid.member_id', '=', 'members.id')->orderBy('time', 'DESC')->get();
 		$wowhead = file_get_contents('http://www.wowhead.com/item=' . $id . '&xml');
 
-		return view('items.show', compact('item', 'history', 'wowhead'));
+		$classes = MClass::asArray();
+		return view('items.show', compact('item', 'history', 'wowhead', 'classes'));
 	}
 
 	/**

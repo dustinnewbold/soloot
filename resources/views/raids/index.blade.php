@@ -45,7 +45,7 @@
 					<td>
 						{{ $raid->zone->name }}
 					</td>
-					<td>
+					<td class="{{ strtolower($raid->difficulty->name) }}">
 						{{ $raid->difficulty->name }}
 					</td>
 					<td>
