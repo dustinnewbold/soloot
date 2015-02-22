@@ -19,8 +19,11 @@
 				<th>
 					Last Loot Received
 				</th>
-				<th>
+				<th class="text-center">
 					Loot Recieved Date
+				</th>
+				<th class="text-right">
+					Attendance
 				</th>
 			</tr>
 		</thead>
@@ -50,10 +53,17 @@
 							</a>
 						@endif
 					</td>
-					<td>
+					<td class="text-center">
 						@if ( ! empty($loots[$member->id]) )
 							{{ round((time() - $loots[$member->id]->time) / 86400) }} days ago
 						@endif
+					</td>
+					<td class="text-right">
+						@if ( empty($raidAttendance[$member->id]) )
+							<?php $raidAttendance[$member->id] = 0; ?>
+						@endif
+						{{ $raidAttendance[$member->id] }} / {{ $totalRaids }}
+						({{ $raidAttendance[$member->id] / $totalRaids * 100 }}%)
 					</td>
 				</tr>
 			@endforeach

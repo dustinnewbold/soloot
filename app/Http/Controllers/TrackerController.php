@@ -30,8 +30,23 @@ class TrackerController extends Controller {
 			$loots[$loot->member_id] = $loot;
 		}
 
+
+		// Get attendance
+		$dbraids = DB::table('raids')->take(12)->get();
+		$raidAttendance = [];
+		$totalRaids = count($dbraids);
+		foreach ( $dbraids as $raid ) {
+			$attendance = DB::table('member_raid')->where('raid_id', $raid->id)->get();
+			foreach ( $attendance as $member ) {
+				if ( empty($raidAttendance[$member->member_id]) ) {
+					$raidAttendance[$member->member_id] = 0;
+				}
+				$raidAttendance[$member->member_id]++;
+			}
+		}
+
 		$classes = MClass::asArray();
-		return view('tracker.index', compact('members', 'loots', 'classes'));
+		return view('tracker.index', compact('members', 'loots', 'classes', 'raidAttendance', 'totalRaids'));
 	}
 
 	/**
