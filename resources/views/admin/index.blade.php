@@ -43,12 +43,12 @@
 	</h2>
 	<div class="alert alert-warning">
 		<p class="bottom">
-			Re-indexing will remove all raid data and reimport all data again from the beginning. This will put all XML import through current raid logic.
+			Re-indexing will remove all raid data and reimport all data again from the beginning. This will put all XML imports through current raid logic.
 		</p>
 	</div>
 	<div class="alert alert-error">
 		<p class="bottom">
-			Re-indexing is not currently set up
+			Re-indexing is not yet implemented through the UI. You must run loot:reindex from the command line to reindex.
 		</p>
 	</div>
 	<form>

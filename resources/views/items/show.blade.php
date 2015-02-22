@@ -46,7 +46,7 @@
 						{{ $loot->name }}
 					</td>
 					<td>
-						<a href="https://www.wowhead.com/{{ lootToLink($loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}" target="_blank" class="stopprop"></a>
+						<a href="https://www.wowhead.com/{{ lootToLink($loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}" target="_blank" class="stopprop loot"></a>
 					</td>
 					<td>
 						{{ date('F d, Y', $loot->time) }}

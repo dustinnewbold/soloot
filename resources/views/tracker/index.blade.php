@@ -48,7 +48,7 @@
 					</td>
 					<td>
 						@if ( ! empty($loots[$member->id]) )
-							<a href="{{ route('items.show', $loots[$member->id]->wowid) }}" rel="{{ lootToLink($loots[$member->id]->idstring) }}">
+							<a href="{{ route('items.show', $loots[$member->id]->wowid) }}" rel="{{ lootToLink($loots[$member->id]->idstring) }}" class="loot">
 								{{ $loots[$member->id]->name }}
 							</a>
 						@endif

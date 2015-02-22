@@ -76,9 +76,11 @@ input {
 input[type=text],
 input[type=number],
 input[type=password] {
-	padding: 5px;
-	border-radius: 3px;
+	padding: 8px 12px;
+	font-size: 15px;
+	border-radius: 6px;
 	border: 0;
+	border: 2px solid #1abc9c;
 }
 
 label {
@@ -105,8 +107,8 @@ textarea {
 }
 
 input[type=submit] {
-	background-color: #5B74A8;
-	border: 1px solid #29447E;
+	background-color: #2980b9;
+	border: 0;
 	font-family: 'Lucida Grande',Tahoma,Verdana,Arial,sans-serif;
 	font-size: 14px;
 	font-weight: 700;

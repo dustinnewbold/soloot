@@ -74,8 +74,8 @@
 }
 
 .btn-blue {
-	background-color: #5B74A8;
-	border: 1px solid #29447E;
+	background-color: #16a085;
+	border: 0;
 
 	-webkit-box-shadow: rgba(0,0,0,0.0.1) 0 1px 0 0;
 	-moz-box-shadow: rgba(0,0,0,0.0.1) 0 1px 0 0;
@@ -98,6 +98,7 @@
 	display: block;
 	float: left;
 	clear: both;
+	text-decoration: none;
 }
 
 .loot:last-child {
