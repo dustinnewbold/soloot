@@ -57,7 +57,7 @@
 					<td>
 						@if ( ! empty($loots[$member->id]) )
 							@foreach ( $loots[$member->id] as $loot )
-								<a href="{{ route('items.show', (int)$loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}"></a><br/>
+								<a href="{{ route('items.show', (int)$loot->idstring) }}" rel="{{ lootToLink($loot->idstring) }}" class="loot"></a><br/>
 							@endforeach
 						@endif
 					</td>
