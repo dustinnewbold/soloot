@@ -85,8 +85,14 @@ class MembersController extends Controller {
 		if ( is_numeric(Input::get('cooldown')) ) {
 			$member->cooldown = (int)Input::get('cooldown');
 		}
-		$member->save();
 
+		if ( Input::get('active') ) {
+			$member->active = 1;
+		} else {
+			$member->active = 0;
+		}
+
+		$member->save();
 		return redirect()->route('members.show', $name);
 	}
 

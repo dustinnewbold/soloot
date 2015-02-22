@@ -17,6 +17,15 @@
 				Cooldown
 			</label>
 			<input type="number" name="cooldown" value="{{ $member->cooldown }}" />
+
+			<label>
+				Active
+			</label>
+			@if ( $member->active )
+				<input type="checkbox" name="active" checked="checked" />
+			@else
+				<input type="checkbox" name="active" />
+			@endif
 		</fieldset>
 
 		<input type="submit" value="Save" />

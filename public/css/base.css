@@ -65,6 +65,7 @@ input {
 }
 
 input[type=text],
+input[type=number],
 input[type=password] {
 	padding: 5px;
 	border-radius: 3px;
