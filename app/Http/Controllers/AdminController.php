@@ -55,7 +55,7 @@ class AdminController extends Controller {
 		$xml = Input::get('xml');
 		$this->importer->storeXML($xml);
 		$this->importer->import($xml);
-		return view('admin.index');
+		return redirect()->route('admin.index');
 	}
 
 	/**
