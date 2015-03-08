@@ -15,10 +15,7 @@
 			<nav class="top_nav">
 				<ul>
 					<li>
-						<a href="https://docs.google.com/forms/d/1JIXPKXYYRQElqh8thbSSMXi4WIWrNX7rglzRfJHlxDA/viewform" target="_blank">APPLY</a>
-					</li>
-					<li>
-						<a href="https://twitter.com/shatteredoathED" target="_blank">TWITTER</a>
+						<a href="http://shatteredoath.com/forum/viewtopic.php?f=5&t=3144">APPLY</a>
 					</li>
 					<li>
 						<a href="/forum">FORUMS</a>
