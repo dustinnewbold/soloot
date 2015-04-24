@@ -30,7 +30,11 @@
 		<tbody>
 			@foreach ( $members as $member )
 				<tr data-href="{{ route('members.show', strtolower($member->name)) }}">
-					<td class="{{ strtolower($classes[$member->class_id]->name) }}">
+					@if ( isset($classes[$member->class_id]) )
+						<td class="{{ strtolower($classes[$member->class_id]->name) }}">
+					@else
+						<td>
+					@endif
 						<a href="{{ route('members.show', strtolower($member->name)) }}">
 							{{ $member->name }}
 						</a>
